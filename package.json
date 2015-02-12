@@ -1,0 +1,11 @@
+{
+  "name": "umd-lib",
+  "main": "mylib.js",
+  "dependencies": {
+    "jsonld": "^0.3.19"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/StatelessCat/umd-lib.git"
+  }
+}
