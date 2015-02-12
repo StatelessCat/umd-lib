@@ -1,18 +1,27 @@
 /*eslint-env AMD*/
 
 /*eslint-disable */
-if (typeof exports === 'object' && typeof define !== 'function') {
-    var define = function (factory) {
-        factory(require, exports, module);
-    };
-}
+(function (root, factory) {
+    if (typeof define === 'function' && define.amd) {
+        // AMD. Register as an anonymous module.
+        define(['exports', '../browser/bower_components/jsonld/js/jsonld'], function (exports, jsonld) {
+            factory((root.commonJsStrictGlobal = exports), jsonld);
+        });
+    } else if (typeof exports === 'object') {
+        // CommonJS
+        factory(exports, require('../nodejs/node_modules/jsonld'));
+    } else {
+        // Browser globals
+        factory((root.commonJsStrictGlobal = {}), root.jsonld);
+    }
 /*eslint-enable */
-
-define(function (require, exports) {
+}(this, function (exports, jsonld) {
     "use strict";
 
-    var jsonld = require("jsonld");
+    //use b in some fashion.
 
+    // attach properties to the exports object to define
+    // the exported module properties.
     exports.myfunction = function() {
 
         // use the promises API
@@ -32,4 +41,4 @@ define(function (require, exports) {
         var promise = promises.compact(doc, context);
         return promise;
     };
-});
+}));

@@ -1,6 +1,6 @@
 /*eslint-env node*/
 
-var myjsonld = require("./mylib.js");
+var myjsonld = require("../src/mylib");
 
 myjsonld.myfunction().then(function(compactedJsonLd) {
     "use strict";

@@ -1,25 +1,29 @@
-# amd-lib
-Just a small module exposed in UMD using nodeAdapter.js
+# umd-lib
+Just a small module using UMD, that expose both AMD and CommonJS interfaces.
 
-## In CommonJS Envs, like Node.js,
+browser/ directory contains a working example of using the lib in a browser.
+nodejs/ directory contains a working example of using the lib in NodeJs.
+
+## Test the lib in Node.js using require to load the lib (using the CommonJS interface):
 
 Install the dependencies:
 ```
- npm install
+cd nodejs && npm install
 ```
 
-Use this lib:
-```js
-var mylib = require("./mylib.js");
+In nodejs directory,
+```
+node nodeTest.js
+```
+in the console, you will see the expected output.
 
-mylib.myfunction().then(function(result) {
-    "use strict";
-    ...
-});
+
+## Test the lib in a browser using RequireJS to load the lib (using the AMD interface):
+
+Install the dependencies:
+```
+cd browser && bower install
 ```
 
-## In AMD Envs, like a browser using RequireJS,
-```
-bower install
-```
+Open browser/index.html in a browser, in the console, you will see the expected output.
 

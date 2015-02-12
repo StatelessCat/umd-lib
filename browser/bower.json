@@ -1,7 +1,7 @@
 {
-  "name": "amd-lib",
+  "name": "umd-lib",
   "version": "0.0.1",
-  "homepage": "https://github.com/StatelessCat/amd-lib",
+  "homepage": "https://github.com/StatelessCat/umd-lib",
   "authors": [
     "Raphael Cazenave-Leveque <raphael.cazenave@gmail.com>"
   ],
@@ -16,5 +16,9 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.16",
+    "jsonld": "~0.3.20"
+  }
 }
