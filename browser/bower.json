@@ -5,7 +5,7 @@
   "authors": [
     "Raphael Cazenave-Leveque <raphael.cazenave@gmail.com>"
   ],
-  "main": "mylib.js",
+  "main": "../src/mylib.js",
   "moduleType": [
     "amd"
   ],
@@ -13,7 +13,6 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
     "test",
     "tests"
   ],
