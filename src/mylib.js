@@ -4,7 +4,7 @@
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
-        define(['exports', '../browser/bower_components/jsonld/js/jsonld'], function (exports, jsonld) {
+        define(['exports', 'bower_components/jsonld/js/jsonld'], function (exports, jsonld) {
             factory((root.commonJsStrictGlobal = exports), jsonld);
         });
     } else if (typeof exports === 'object') {
