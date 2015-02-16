@@ -7274,10 +7274,13 @@ if(!_nodejs && (typeof define === 'function' && define.amd)) {
   // wrap the main jsonld API instance
   wrapper(factory);
 
-  if(_nodejs) {
-    // export nodejs API
+  if(typeof require === 'function' &&
+    typeof module !== 'undefined' && module.exports) {
+    // export CommonJS/nodejs API
     module.exports = factory;
-  } else if(_browser) {
+  }
+
+  if(_browser) {
     // export simple browser API
     if(typeof jsonld === 'undefined') {
       jsonld = jsonldjs = factory;
@@ -7287,9 +7290,10 @@ if(!_nodejs && (typeof define === 'function' && define.amd)) {
   }
 }
 
+return factory;
+
 })();
 
-module.exports = jsonldjs;
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},"/node_modules/jsonld/js")
 },{"./request":1,"_process":8,"crypto":1,"es6-promise":3,"http":1,"pkginfo":4,"request":1,"util":1,"xmldom":1}],3:[function(require,module,exports){
 (function (process,global){
