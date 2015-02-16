@@ -3,7 +3,7 @@
   "main": "mylib.js",
   "version": "0.1.3",
   "dependencies": {
-    "jsonld": "^0.3.21"
+    "n3": "^0.4.1"
   },
   "repository": {
     "type": "git",

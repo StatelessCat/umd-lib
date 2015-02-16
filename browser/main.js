@@ -2,7 +2,7 @@
 
 require.config({
     paths: {
-        mylib: "../src/mylib"
+        mylib: "../src/bundle"
     }
 });
 
