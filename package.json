@@ -1,9 +1,9 @@
 {
   "name": "umd-lib",
   "main": "mylib.js",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "dependencies": {
-    "jsonld": "^0.3.20"
+    "jsonld": "^0.3.21"
   },
   "repository": {
     "type": "git",
